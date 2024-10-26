@@ -1,15 +1,15 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: I'm <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle:
 
 profile:
-  align: left
+  align: right
   image: kexu.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>🌎Shanghai, China</p>
+    <p> 🌎Shanghai, China</p>
 
 News: true # includes a list of news items
 Selected_papers: true # includes a list of papers marked as "selected={true}"
