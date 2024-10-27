@@ -1,0 +1,17 @@
+<div class="experience-list">
+  {% assign experiences = site.data.experience | reverse %} <!-- 反转顺序，让最新的经历在前 -->
+  <table class="table table-borderless">
+    {% for item in experiences %}
+      <tr>
+        <td style="width: 15%;">
+          <img src="{{ 'assets/img/' | append: item.logo }}" alt="{{ item.institution }} logo" class="experience-logo">
+        </td>
+        <td>
+          <strong>{{ item.date }}</strong>: {{ item.title }}, supervised by 
+          {{ item.description }}
+          <p><a href="{{ item.link }}" target="_blank">{{ item.institution }}</a></p>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+</div>
