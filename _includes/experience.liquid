@@ -4,7 +4,7 @@
     {% for item in experiences %}
       <tr>
         <td style="width: 15%;">
-          <img src="{{ 'assets/img/' | append: item.logo }}" alt="{{ item.institution }} logo" class="experience-logo">
+          <img src="{{ '/assets/img/' | append: item.logo }}" alt="{{ item.institution }} logo" class="experience-logo">
         </td>
         <td>
           <strong>{{ item.date }}</strong>: {{ item.title }}, supervised by 
