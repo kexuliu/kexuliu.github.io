@@ -1,0 +1,18 @@
+# _data/experience.yml
+
+- date: "Aug. 2024 -- Present"
+  title: "Research Intern"
+  description: "Supervised by <a href='https://scholar.google.com/citations?user=K6zhweAAAAAJ&hl=en' target='_blank'>Prof. Zhizheng Wu</a> at CUHK-Shenzhen & Shanghai AI Laboratory."
+  institution: "CUHK-Shenzhen & Shanghai AI Laboratory"
+  logos: 
+    - "cuhk_logo.png"
+    - "shanghai_ai_lab_logo.png"
+  link: "https://www.cuhk.edu.cn"
+
+# - date: "July 2023 -- Present"
+#   title: "Undergraduate Research Intern"
+#   description: "Supervised by <a href='https://scholar.google.com/citations?user=GeGgmfoAAAAJ&hl=zh-CN' target='_blank'>Prof. Xi Shao</a>."
+#   institution: "Nanjing University of Posts and Telecommunications"
+#   logo: "hku_logo.png"
+#   link: ""
+
