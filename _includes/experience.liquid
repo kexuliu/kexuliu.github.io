@@ -1,3 +1,12 @@
+<style>
+  .experience-logo {
+    width: 60px; /* 设定固定宽度 */
+    height: 60px; /* 设定固定高度 */
+    object-fit: cover; /* 保持图片比例，填充整个区域 */
+  }
+</style>
+
+
 <div class="experience-list">
   {% assign experiences = site.data.experience | reverse %} <!-- 反转顺序，让最新的经历在前 -->
   <table class="table table-borderless">
