@@ -17,6 +17,7 @@ li,
 span,
 strong {
   color: var(--global-text-color);
+  font-family:"Roboto", sans-serif;
 }
 
 hr {
@@ -128,6 +129,7 @@ blockquote {
     h5,
     h6 {
       color: var(--global-danger-block-title);
+      font-weight:400;
     }
   }
 }
@@ -193,7 +195,7 @@ ul.task-list input[type="checkbox"] {
 // Profile
 
 .profile {
-  width: 100%;
+  width: 98%;
 
   .more-info {
     margin-bottom: 5px;
