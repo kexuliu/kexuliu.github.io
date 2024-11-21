@@ -56,7 +56,7 @@ layout: default
       {% include experience.liquid %}
     </div>
 
-    {% comment %}
+
     <!-- News -->
     {% if site.announcements.enabled %}
       <h2>
@@ -64,7 +64,8 @@ layout: default
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
-
+    
+    {% comment %}
     <!-- Latest posts -->
     {% if site.latest_posts.enabled %}
       <h2>

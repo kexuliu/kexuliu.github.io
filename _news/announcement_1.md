@@ -5,4 +5,4 @@ inline: ture
 related_posts: false
 ---
 
-Coming soon!
+My personal website is now live, looking forward to good news! ☄️
