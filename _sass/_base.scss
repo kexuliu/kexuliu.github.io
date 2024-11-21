@@ -20,6 +20,16 @@ strong {
   font-family:"Roboto", sans-serif;
 }
 
+h2
+{
+    font-weight:500;
+}
+div {
+  color: var(--global-text-color);
+  font-family: "Roboto",sans-serif;
+  font-size: large
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
@@ -195,12 +205,13 @@ ul.task-list input[type="checkbox"] {
 // Profile
 
 .profile {
-  width: 98%;
+  width: 100%;
 
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
     font-family: monospace;
+    text-align: center;
 
     p {
       display: inline-block;
@@ -219,7 +230,7 @@ ul.task-list input[type="checkbox"] {
 
 @media (min-width: 576px) {
   .profile {
-    width: 30%;
+    width: 25%;
 
     .address {
       p {
@@ -385,7 +396,7 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 
   .contact-icons {
-    font-size: 2rem;
+    font-size: 2.5rem;
 
     a {
       i::before {

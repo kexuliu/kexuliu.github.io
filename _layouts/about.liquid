@@ -50,12 +50,13 @@ layout: default
 
       <!-- Experience Section -->
     <h2>
-      <a href="{{ '/experience/' | relative_url }}" style="color: inherit">Experience 🛠️</a>
+      <a href="{{ '/experience/' | relative_url }}" style="color: inherit">Experience</a>
     </h2>
     <div class="experience-section">
       {% include experience.liquid %}
     </div>
 
+    {% comment %}
     <!-- News -->
     {% if site.announcements.enabled %}
       <h2>
@@ -71,6 +72,7 @@ layout: default
       </h2>
       {% include latest_posts.liquid %}
     {% endif %}
+    {% endcomment %}
 
     <!-- Selected papers -->
     <h2>
