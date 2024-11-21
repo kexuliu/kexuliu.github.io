@@ -28,24 +28,24 @@ div {
   color: var(--global-text-color);
   font-family: "Roboto",sans-serif;
   font-size: large;
+  font-weight: 400;
 }
 
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
 
-table {
-  td,
-  th {
-    font-size: 1rem;
-    padding: 1px 1rem 1px 0;
-    font-weight: 400;
-    font-size: large;
-  }
 
-  th {
-    font-weight: bold;
-  }
+
+table td,table th {
+  font-size: 1rem;
+  padding: 1px 1rem 1px 0;
+  font-weight: 500;
+  font-size: large;
+}
+
+table th {
+  font-weight: bold
 }
 
 a,
