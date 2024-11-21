@@ -16,8 +16,10 @@ Selected_papers: true # includes a list of papers marked as "selected={true}"
 Social: true # includes social icons at the bottom of the page
 ---
 
-I am a final-year undergraduate in Information and Computational Science at Nanjing University of Posts and Telecommunications (NJUPT). I currently work under the guidance of Prof. Xi Shao in the Auditory Intelligence Computing Lab, where I lead a project focused on synthetic speech anti-spoofing. This research, supported by the National Undergraduate Innovation Training Program, aims to improve model performance across different spoofing techniques.
+Hi there! I am a final-year undergraduate student majoring in Applied Mathematics at the School of Science, Nanjing University of Posts and Telecommunications (NJUPT).
 
-I am also a Research Assistant at The Chinese University of Hong Kong, Shenzhen, working with Prof. Zhizheng Wu on DeepFake detection in audio and speech processing. Recently, I contributed to a project on adversarial attack detection, where I helped develop a DeepFake detection model designed to adapt quickly to new types of fake content.
+Currently, I am honored to be a Research Intern at the [Shanghai AI Laboratory](https://www.shlab.org.cn/), under the guidance of [Prof. Zhizheng Wu](https://scholar.google.com/citations?user=K6zhweAAAAAJ&hl=en). Prior to this, I was fortunate to be mentored by [Prof. Xi Shao](https://scholar.google.com/citations?hl=zh-CN&user=GeGgmfoAAAAJ&view_op=list_works&sortby=pubdate) at NJUPT.
 
-My research interests include Generative Model Safety, Deepfake Detection, and Unsupervised Learning, with a focus on building safe and reliable AI systems.
+<!-- [Hamming question](https://medium.com/@kazuki_sf_/what-is-the-important-question-1d38290b2e9d) -->
+
+I am actively seeking PhD opportunities for Fall 2025, with a strong interest in exploring innovative research at the intersection of xxxxx.
