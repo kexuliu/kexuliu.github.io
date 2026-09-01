@@ -1,0 +1,7 @@
+type: research
+page-layout: article
+title-block-banner: false
+format:
+  html:
+    toc: true
+    code-copy: true

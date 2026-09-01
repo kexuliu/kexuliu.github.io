@@ -1,0 +1,56 @@
+---
+title: ""
+page-layout: full
+body-classes: home-page
+toc: false
+listing:
+  contents:
+    - research/*/index.qmd
+    - analysis/*/index.qmd
+    - blog/*/index.qmd
+  type: default
+  sort: "date desc"
+  fields: [date, title, description, categories]
+  max-items: 8
+  sort-ui: false
+  filter-ui: false
+---
+
+<section class="bio-layout">
+<div class="bio-copy">
+<div class="bio-name" role="heading" aria-level="1">Kexu Liu <span>(Caspian)</span></div>
+<p class="bio-lead">Currently, I'm an independent builder.</p>
+<p>My current research interests include Agentic AI, Multimodal AI and AI Infrastructure.
+Additionally, I am interested in technical value chains and the ways in which emerging technologies transform the world around us.</p>
+<p>This personal page is for publishing research, industry analysis, and technical notes.</p>
+</div>
+<aside class="bio-aside">
+<figure class="profile-portrait">
+<img class="profile-portrait-image" src="assets/caspian-portrait-transparent-v3.png" width="1720" height="1720" alt="Portrait of Kexu Liu" decoding="async" fetchpriority="high">
+</figure>
+<!-- Replace only the four href values below when your public profiles are ready. -->
+<nav class="profile-links" aria-label="Public profiles">
+  <a href="https://github.com/kexuliu" aria-label="GitHub" title="GitHub">
+    <i class="bi bi-github" aria-hidden="true"></i>
+    <span>GitHub</span>
+  </a>
+  <a href="https://www.linkedin.com/in/kexuliu" aria-label="LinkedIn" title="LinkedIn">
+    <i class="bi bi-linkedin" aria-hidden="true"></i>
+    <span>LinkedIn</span>
+  </a>
+  <a href="https://xhslink.cn/o/7hrzbhI3R8O" aria-label="Xiaohongshu" title="Xiaohongshu">
+    <span class="profile-link-glyph" aria-hidden="true">RED</span>
+    <span>Xiaohongshu</span>
+  </a>
+  <a href="https://x.com/Kexu_Ai" aria-label="X / Twitter" title="X / Twitter">
+    <i class="bi bi-twitter-x" aria-hidden="true"></i>
+    <span>X / Twitter</span>
+  </a>
+</nav>
+</aside>
+</section>
+
+<section class="home-section-heading">
+<div class="home-section-title" role="heading" aria-level="2">Latest</div>
+<p>Academic research, industry research, technical blogs, thoughts etc.</p>
+</section>

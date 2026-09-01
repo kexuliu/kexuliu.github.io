@@ -1,0 +1,28 @@
+---
+title: ""
+pagetitle: "Research"
+page-layout: full
+toc: false
+listing:
+  contents: "*/index.qmd"
+  type: default
+  sort: "date desc"
+  fields: [date, title, description, categories]
+  sort-ui: false
+  filter-ui: false
+---
+
+<!-- Edit the introduction below directly in Markdown. -->
+::: {.section-intro .section-intro-research}
+<div class="section-intro-title" role="heading" aria-level="1">Research</div>
+
+::: {.section-intro-copy}
+Original investigations and technical explorations.
+
+> *“The formulation of a problem is often more essential than its solution, which may be merely a matter of mathematical or experimental skill.”*  
+> — **The Evolution of Physics**, Einstein & Infeld, 1938
+
+> *“The significant problems we face cannot be solved at the same level of thinking we were at when we created them.”*  
+> — **Albert Einstein**
+:::
+:::

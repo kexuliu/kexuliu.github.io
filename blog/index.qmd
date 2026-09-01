@@ -1,0 +1,22 @@
+---
+title: ""
+pagetitle: "Blog"
+page-layout: full
+toc: false
+listing:
+  contents: "*/index.qmd"
+  type: default
+  sort: "date desc"
+  fields: [date, title, description, categories]
+  sort-ui: false
+  filter-ui: false
+---
+
+<!-- Edit the introduction below directly in Markdown. -->
+::: {.section-intro .section-intro-blog}
+<div class="section-intro-title" role="heading" aria-level="1">Blog</div>
+
+::: {.section-intro-copy}
+Technical notes, reading notes, and observations.
+:::
+:::

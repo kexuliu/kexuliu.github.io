@@ -1,0 +1,22 @@
+---
+title: ""
+pagetitle: "Analysis"
+page-layout: full
+toc: false
+listing:
+  contents: "*/index.qmd"
+  type: default
+  sort: "date desc"
+  fields: [date, title, description, categories]
+  sort-ui: false
+  filter-ui: false
+---
+
+<!-- Edit the introduction below directly in Markdown. -->
+::: {.section-intro .section-intro-analysis}
+<div class="section-intro-title" role="heading" aria-level="1">Analysis</div>
+
+::: {.section-intro-copy}
+Technology and industry analysis.
+:::
+:::

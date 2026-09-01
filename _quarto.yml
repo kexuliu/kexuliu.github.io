@@ -1,0 +1,45 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - assets/caspian-portrait-transparent-v3.png
+    - assets/home-space-v4.jpg
+
+website:
+  title: "Kexu Liu (Caspian)"
+  description: "Kexu Liu's research, analysis, and technical notes on artificial intelligence, technology, and markets."
+  navbar:
+    pinned: true
+    collapse-below: lg
+    left:
+      - text: Research
+        href: research/index.qmd
+      - text: Analysis
+        href: analysis/index.qmd
+      - text: Blog
+        href: blog/index.qmd
+  search:
+    location: navbar
+    type: overlay
+  page-navigation: true
+  back-to-top-navigation: true
+  open-graph: true
+  twitter-card: true
+  page-footer:
+    left: "© 2026 Kexu Liu"
+    right: "Research · Analysis · Notes"
+
+format:
+  html:
+    theme: darkly
+    css: styles.css
+    toc: true
+    toc-location: right
+    smooth-scroll: true
+    code-copy: true
+    code-overflow: wrap
+    anchor-sections: true
+    link-external-newwindow: true
+
+execute:
+  freeze: auto

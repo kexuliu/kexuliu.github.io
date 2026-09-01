@@ -1,0 +1,12 @@
+---
+title: "Page not found"
+page-layout: full
+toc: false
+---
+
+<section class="error-page">
+  <p class="meta-label">404</p>
+  <h1>This page could not be found.</h1>
+  <p>The page may have moved, or the link may be incomplete.</p>
+  <a class="text-link" href="/">Return to homepage →</a>
+</section>
