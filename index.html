@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7ac5a54867a4b532597271fb198063f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-f018603db40dff0427612e727299feeb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -137,13 +137,17 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="– Kexu Liu (Caspian)">
 <meta property="og:description" content="Kexu Liu’s research, analysis, and technical notes on artificial intelligence, technology, and markets.">
-<meta property="og:image" content="assets/caspian-portrait-transparent-v3.png">
+<meta property="og:image" content="https://kexuliu.github.io/assets/caspian-portrait-transparent-v3.png">
 <meta property="og:site_name" content="Kexu Liu (Caspian)">
 <meta property="og:image:alt" content="Portrait of Kexu Liu">
+<meta property="og:image:height" content="1720">
+<meta property="og:image:width" content="1720">
 <meta name="twitter:title" content="– Kexu Liu (Caspian)">
 <meta name="twitter:description" content="Kexu Liu’s research, analysis, and technical notes on artificial intelligence, technology, and markets.">
-<meta name="twitter:image" content="assets/caspian-portrait-transparent-v3.png">
+<meta name="twitter:image" content="https://kexuliu.github.io/assets/caspian-portrait-transparent-v3.png">
 <meta name="twitter:image:alt" content="Portrait of Kexu Liu">
+<meta name="twitter:image-height" content="1720">
+<meta name="twitter:image-width" content="1720">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -310,7 +314,7 @@ Academic research, industry research, technical blogs, thoughts etc.
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/kexuliu\.github\.io\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
