@@ -4,8 +4,10 @@ project:
   resources:
     - assets/caspian-portrait-transparent-v3.png
     - assets/home-space-v4.jpg
+    - robots.txt
 
 website:
+  site-url: https://kexuliu.github.io
   title: "Kexu Liu (Caspian)"
   description: "Kexu Liu's research, analysis, and technical notes on artificial intelligence, technology, and markets."
   navbar:
