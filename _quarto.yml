@@ -3,7 +3,8 @@ project:
   output-dir: _site
   resources:
     - assets/caspian-portrait-transparent-v3.png
-    - assets/home-space-v4.jpg
+    - assets/cosmos/
+    - assets/site-ui.js
     - robots.txt
     - googleddd6d2c58230dd06.html
 
@@ -25,7 +26,7 @@ website:
     location: navbar
     type: overlay
   page-navigation: true
-  back-to-top-navigation: true
+  back-to-top-navigation: false
   open-graph: true
   twitter-card: true
   page-footer:
@@ -36,6 +37,8 @@ format:
   html:
     theme: darkly
     css: styles.css
+    include-before-body: _includes/cosmos.html
+    include-after-body: _includes/site-ui.html
     toc: true
     toc-location: right
     smooth-scroll: true
