@@ -3,15 +3,16 @@
 :root {
   --ink: #e8e7e1;
   --ink-strong: #f4f3ed;
-  --muted: #959aa2;
-  --muted-strong: #b7bbc1;
-  --ground: #03050a;
-  --ground-soft: #090c13;
+  --muted: #a8adb5;
+  --muted-strong: #c0c5cb;
+  --ground: #040609;
+  --ground-soft: #0b0f15;
   --line: rgba(232, 231, 225, 0.14);
   --line-soft: rgba(232, 231, 225, 0.08);
   --blue: #86b6d3;
   --violet: #a799c4;
   --green: #98b8a7;
+  --starlight: #e3c89f;
   --sans:
     Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
@@ -29,51 +30,86 @@ html {
 }
 
 body {
+  isolation: isolate;
   overflow-x: hidden;
   color: var(--ink);
   background-color: var(--ground);
-  background-image:
-    radial-gradient(
-      circle at 82% -12%,
-      rgba(31, 61, 91, 0.24),
-      transparent 34rem
-    ),
-    linear-gradient(180deg, #050a12 0%, var(--ground) 38rem);
-  background-position: center;
-  background-size: auto;
-  background-repeat: no-repeat;
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 
-body.home-page::before {
+#page-top {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  outline: none;
+}
+
+/* Real imagery stays behind an independently shaded reading surface. */
+.cosmos {
   position: fixed;
-  z-index: 0;
+  z-index: -1;
   inset: 0;
+  overflow: hidden;
   pointer-events: none;
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(1, 4, 9, 0.14) 0%,
-      rgba(1, 4, 9, 0.3) 55%,
-      rgba(1, 4, 9, 0.6) 100%
-    ),
-    linear-gradient(
-      90deg,
-      rgba(1, 4, 9, 0.34) 0%,
-      rgba(1, 4, 9, 0.08) 62%,
-      rgba(1, 4, 9, 0.02) 100%
-    ),
-    url("assets/home-space-v4.jpg");
-  background-position:
-    center,
-    center,
-    center top;
-  background-size: cover, cover, cover;
-  background-repeat: no-repeat;
-  content: "";
+  background: #030508;
+  contain: layout paint;
+}
+
+.cosmos-scene {
+  position: absolute;
+  top: 3.65rem;
+  right: 0;
+  width: min(100vw, 1920px);
+  aspect-ratio: 16 / 9;
+  height: auto;
+  opacity: 0.2;
+  mask-image: linear-gradient(#000 65%, transparent 100%);
+  -webkit-mask-image: linear-gradient(#000 65%, transparent 100%);
+}
+
+.cosmos-poster,
+.cosmos-poster img,
+.cosmos-video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.cosmos-video {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.home-page .cosmos-scene {
+  opacity: 0.95;
+}
+
+.cosmos-landing .cosmos-scene {
+  opacity: 0.42;
+}
+
+.cosmos-playing .cosmos-video {
+  opacity: 1;
+}
+
+.cosmos-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(3, 5, 8, 0.97) 0%, rgba(3, 5, 8, 0.9) 26%, rgba(3, 5, 8, 0.53) 49%, rgba(3, 5, 8, 0.1) 76%),
+    linear-gradient(180deg, rgba(3, 5, 8, 0.12) 0%, transparent 28%, rgba(3, 5, 8, 0.3) 70%, rgba(3, 5, 8, 0.66) 100%);
+}
+
+body:not(.home-page):not(.cosmos-landing) .cosmos-shade {
+  background: linear-gradient(90deg, #040609 8%, rgba(4, 6, 9, 0.88) 68%, rgba(4, 6, 9, 0.5));
 }
 
 .navbar,
@@ -102,18 +138,14 @@ a:hover {
 .navbar {
   min-height: 3.65rem;
   padding: 0;
-  background: rgba(3, 5, 10, 0.9) !important;
+  background: transparent !important;
   border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(16px);
+  backdrop-filter: none;
   box-shadow: none;
 }
 
 body.home-page .navbar {
-  background: linear-gradient(
-    180deg,
-    rgba(1, 4, 9, 0.72) 0%,
-    rgba(1, 4, 9, 0.22) 100%
-  ) !important;
+  background: transparent !important;
   border-bottom-color: rgba(232, 231, 225, 0.09);
   backdrop-filter: none;
 }
@@ -162,7 +194,7 @@ body.home-page .navbar {
 
 .navbar-nav .nav-link:hover::after,
 .navbar-nav .nav-link.active::after {
-  background: var(--blue);
+  background: linear-gradient(90deg, var(--blue), var(--starlight));
 }
 
 .navbar .quarto-navbar-tools {
@@ -201,7 +233,8 @@ main.content.column-page {
   gap: clamp(2.75rem, 6vw, 4.5rem);
   width: 100%;
   max-width: 920px;
-  padding: clamp(3.75rem, 8vw, 5.5rem) 0 clamp(2.75rem, 6vw, 4rem);
+  min-height: clamp(540px, 66svh, 760px);
+  padding: clamp(5.5rem, 10vw, 8.5rem) 0 clamp(2.75rem, 6vw, 4rem);
   border-bottom: 1px solid var(--line);
 }
 
@@ -215,6 +248,7 @@ main.content.column-page {
   flex: 1 1 auto;
   min-width: 0;
   max-width: 590px;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.6);
 }
 
 .meta-label {
@@ -299,12 +333,20 @@ main.content.column-page {
   border-radius: 50%;
   font-size: 0.83rem;
   text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
 .profile-links a:hover {
   color: var(--ink-strong);
   background: rgba(134, 182, 211, 0.1);
   border-color: rgba(134, 182, 211, 0.52);
+  transform: translateY(-2px);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--starlight);
+  outline-offset: 5px;
 }
 
 .profile-links a > span:not(.profile-link-glyph) {
@@ -696,6 +738,117 @@ code {
 
 /* Responsive layout */
 
+/* Quiet controls sit outside the reading column. */
+.return-flight[hidden] {
+  display: none;
+}
+
+.return-flight {
+  position: fixed;
+  z-index: 20;
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: max(1.5rem, env(safe-area-inset-bottom));
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  color: #d9e8ee;
+  background: rgba(7, 13, 20, 0.91);
+  border: 1px solid rgba(176, 207, 224, 0.24);
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), inset 0 0 16px rgba(134, 182, 211, 0.03);
+  backdrop-filter: blur(12px);
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.return-flight-orbit {
+  position: absolute;
+  inset: -5px;
+  border: 1px solid rgba(161, 190, 207, 0.12);
+  border-top-color: rgba(227, 200, 159, 0.65);
+  border-bottom-color: rgba(134, 182, 211, 0.4);
+  border-radius: 50%;
+  transform: rotate(-35deg) scaleX(0.91);
+  transition: transform 350ms ease, border-color 200ms ease;
+}
+
+.return-flight-ship {
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.flight-hull {
+  fill: rgba(170, 202, 220, 0.06);
+}
+
+.flight-detail {
+  stroke: var(--starlight);
+  stroke-width: 1;
+}
+
+.flight-exhaust {
+  stroke: #9ad7f1;
+  opacity: 0;
+  transform-origin: 20px 34px;
+}
+
+.return-flight-label {
+  position: absolute;
+  bottom: calc(100% + 14px);
+  left: 50%;
+  padding: 0.4rem 0.65rem;
+  color: var(--ink-strong);
+  background: rgba(6, 11, 17, 0.95);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  font: 0.75rem var(--mono);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, 4px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.return-flight:is(:hover, :focus-visible) {
+  border-color: rgba(227, 200, 159, 0.6);
+  box-shadow: 0 0 22px rgba(134, 182, 211, 0.11);
+}
+
+.return-flight:is(:hover, :focus-visible) .return-flight-orbit {
+  transform: rotate(10deg) scaleX(0.91);
+}
+
+.return-flight:is(:hover, :focus-visible) .return-flight-label {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.return-flight.is-launching .return-flight-ship {
+  animation: flight-launch 400ms ease-in-out;
+}
+
+.return-flight.is-launching .flight-exhaust {
+  animation: flight-thrust 350ms ease-out;
+}
+
+@keyframes flight-launch {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(2px); }
+  65% { transform: translateY(-7px); }
+}
+
+@keyframes flight-thrust {
+  0%, 100% { opacity: 0; transform: scaleY(0.3); }
+  35%, 60% { opacity: 1; transform: scaleY(1.1); }
+}
+
 @media (max-width: 991px) {
   .navbar > .container-fluid,
   main.content.column-page {
@@ -718,6 +871,7 @@ code {
   .bio-layout.page-columns {
     flex-direction: column;
     gap: 2.25rem;
+    min-height: 0;
   }
 
   .bio-copy {
@@ -736,11 +890,10 @@ code {
     margin-bottom: 0;
   }
 
-  body.home-page::before {
-    background-position:
-      center,
-      center,
-      66% top;
+  .cosmos-shade {
+    background:
+      linear-gradient(90deg, rgba(3, 5, 8, 0.93), rgba(3, 5, 8, 0.65) 50%, rgba(3, 5, 8, 0.08)),
+      linear-gradient(180deg, rgba(3, 5, 8, 0.05), rgba(3, 5, 8, 0.55) 65%, rgba(3, 5, 8, 0.8));
   }
 }
 
@@ -780,20 +933,14 @@ code {
     margin-left: -0.5rem;
   }
 
-  body.home-page::before {
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(1, 4, 9, 0.2) 0%,
-        rgba(1, 4, 9, 0.4) 58%,
-        rgba(1, 4, 9, 0.7) 100%
-      ),
-      linear-gradient(90deg, rgba(1, 4, 9, 0.44) 0%, rgba(1, 4, 9, 0.08) 100%),
-      url("assets/home-space-v4.jpg");
-    background-position:
-      center,
-      center,
-      72% top;
+  .home-page .cosmos-scene {
+    opacity: 0.7;
+  }
+
+  .return-flight {
+    bottom: max(1.1rem, env(safe-area-inset-bottom));
+    width: 50px;
+    height: 50px;
   }
 
   .quarto-listing-default .quarto-post {
@@ -824,5 +971,6 @@ code {
   *::after {
     scroll-behavior: auto !important;
     transition: none !important;
+    animation: none !important;
   }
 }
