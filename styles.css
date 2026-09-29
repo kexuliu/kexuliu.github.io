@@ -229,8 +229,8 @@ main.content.column-page {
 .bio-layout.page-columns {
   position: relative;
   display: flex !important;
-  align-items: flex-start;
-  gap: clamp(2.75rem, 6vw, 4.5rem);
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   max-width: 920px;
   min-height: clamp(540px, 66svh, 760px);
@@ -238,14 +238,11 @@ main.content.column-page {
   border-bottom: 1px solid var(--line);
 }
 
-.bio-layout > .bio-copy,
-.bio-layout > .bio-aside {
+.bio-layout > .bio-copy {
   grid-column: auto !important;
 }
 
 .bio-copy {
-  align-self: center;
-  flex: 1 1 auto;
   min-width: 0;
   max-width: 590px;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.6);
@@ -285,40 +282,11 @@ main.content.column-page {
   line-height: 1.72;
 }
 
-.bio-copy .bio-lead {
-  margin-top: 1.35rem;
-  color: var(--muted-strong);
-  font-size: 1.12rem;
-}
-
-.bio-aside {
-  align-self: start;
-  flex: 0 0 280px;
-  min-width: 0;
-}
-
-.profile-portrait {
-  position: relative;
-  aspect-ratio: 0.82;
-  margin: -1.4rem -0.25rem 0 -0.45rem;
-  overflow: hidden;
-  background: transparent;
-}
-
-.profile-portrait-image {
-  display: block;
-  width: 160%;
-  max-width: none;
-  height: auto;
-  image-rendering: auto;
-  transform: translate(-18.5%, -12%);
-}
-
 .profile-links {
   display: grid;
   grid-template-columns: repeat(4, 2rem);
   gap: 0.45rem;
-  margin-top: 0.7rem;
+  margin-top: 0.95rem;
 }
 
 .profile-links a {
@@ -869,25 +837,12 @@ code {
   }
 
   .bio-layout.page-columns {
-    flex-direction: column;
-    gap: 2.25rem;
+    justify-content: flex-start;
     min-height: 0;
   }
 
   .bio-copy {
     max-width: 650px;
-  }
-
-  .bio-aside {
-    display: block;
-    width: 230px;
-    max-width: 100%;
-    flex-basis: auto;
-    justify-self: start;
-  }
-
-  .profile-portrait {
-    margin-bottom: 0;
   }
 
   .cosmos-shade {
@@ -921,16 +876,6 @@ code {
 
   .bio-layout {
     padding-top: 3.25rem;
-  }
-
-  .bio-aside {
-    max-width: 250px;
-  }
-
-  .profile-portrait {
-    margin-top: -0.5rem;
-    margin-right: 0;
-    margin-left: -0.5rem;
   }
 
   .home-page .cosmos-scene {
