@@ -6,7 +6,7 @@ This project keeps editable source files separate from the generated website. Ed
 
 | Content | File |
 |---|---|
-| Homepage bio, portrait, and public links | `index.qmd` |
+| Homepage bio and public links | `index.qmd` |
 | Navigation, site title, search, and footer | `_quarto.yml` |
 | Research introduction | `research/index.qmd` |
 | Analysis introduction | `analysis/index.qmd` |

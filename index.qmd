@@ -19,15 +19,6 @@ listing:
 <section class="bio-layout">
 <div class="bio-copy">
 <div class="bio-name" role="heading" aria-level="1">Kexu Liu <span>(Caspian)</span></div>
-<p class="bio-lead">Currently, I'm an independent builder.</p>
-<p>My current research interests include Agentic AI, Multimodal AI and AI Infrastructure.
-Additionally, I am interested in technical value chains and the ways in which emerging technologies transform the world around us.</p>
-<p>This personal page is for publishing research, industry analysis, and technical notes.</p>
-</div>
-<aside class="bio-aside">
-<figure class="profile-portrait">
-<img class="profile-portrait-image" src="assets/caspian-portrait-transparent-v3.png" width="1720" height="1720" alt="Portrait of Kexu Liu" decoding="async" fetchpriority="high">
-</figure>
 <!-- Replace only the four href values below when your public profiles are ready. -->
 <nav class="profile-links" aria-label="Public profiles">
   <a href="https://github.com/kexuliu" aria-label="GitHub" title="GitHub">
@@ -47,7 +38,10 @@ Additionally, I am interested in technical value chains and the ways in which em
     <span>X / Twitter</span>
   </a>
 </nav>
-</aside>
+<p>My current research interests include Agentic AI, Multimodal AI and AI Infrastructure.
+Additionally, I am interested in technical value chains and the ways in which emerging technologies transform the world around us.</p>
+<p>This personal page is for publishing research, industry analysis, and technical notes.</p>
+</div>
 </section>
 
 <section class="home-section-heading">

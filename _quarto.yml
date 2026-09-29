@@ -2,7 +2,6 @@ project:
   type: website
   output-dir: _site
   resources:
-    - assets/caspian-portrait-transparent-v3.png
     - assets/cosmos/
     - assets/site-ui.js
     - robots.txt
