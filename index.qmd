@@ -1,8 +1,5 @@
 ---
 title: ""
-description: "Kexu Liu (Caspian)'s personal site for research, analysis, and technical notes on artificial intelligence, technology, and markets."
-author: "Kexu Liu"
-keywords: [Kexu Liu, Caspian, artificial intelligence, Agentic AI, Multimodal AI, AI infrastructure]
 page-layout: full
 body-classes: home-page
 toc: false
